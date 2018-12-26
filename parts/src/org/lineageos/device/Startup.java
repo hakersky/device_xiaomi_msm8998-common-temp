@@ -24,6 +24,9 @@ import android.support.v7.preference.PreferenceManager;
 import android.provider.Settings;
 import android.text.TextUtils;
 
+import org.lineageos.device.R;
+import org.lineageos.device.utils.FileUtils;
+
 public class Startup extends BroadcastReceiver {
 
     private void restore(String file, boolean enabled) {
@@ -31,7 +34,7 @@ public class Startup extends BroadcastReceiver {
             return;
         }
         if (enabled) {
-            Utils.writeValue(file, "1");
+            FileUtils.writeValue(file, "1");
         }
     }
 
@@ -39,7 +42,7 @@ public class Startup extends BroadcastReceiver {
         if (file == null) {
             return;
         }
-        Utils.writeValue(file, value);
+        FileUtils.writeValue(file, value);
     }
 
     @Override
@@ -48,11 +51,11 @@ public class Startup extends BroadcastReceiver {
         VibratorStrengthPreference.restore(context);
         S2SVibratorStrengthPreference.restore(context);
         String storedValue = PreferenceManager.getDefaultSharedPreferences(context).getString(DeviceSettings.S2S_KEY, "0");
-        Utils.writeValue(DeviceSettings.FILE_S2S_TYPE, storedValue);
+        FileUtils.writeValue(DeviceSettings.FILE_S2S_TYPE, storedValue);
         boolean btnSwapStoredValue = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(DeviceSettings.BUTTONS_SWAP_KEY, false);
-        Utils.writeValue(DeviceSettings.BUTTONS_SWAP_PATH, btnSwapStoredValue ? "1" : "0");
+        FileUtils.writeValue(DeviceSettings.BUTTONS_SWAP_PATH, btnSwapStoredValue ? "1" : "0");
         boolean usbFastchargeStoredValue = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(DeviceSettings.USB_FASTCHARGE_KEY, false);
-        Utils.writeValue(DeviceSettings.USB_FASTCHARGE_PATH, usbFastchargeStoredValue ? "1" : "0" );
+        FileUtils.writeValue(DeviceSettings.USB_FASTCHARGE_PATH, usbFastchargeStoredValue ? "1" : "0" );
         DisplayCalibration.restore(context);
     }
 }

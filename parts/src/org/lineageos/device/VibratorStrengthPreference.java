@@ -31,6 +31,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.os.Vibrator;
 
+import org.lineageos.device.R;
+import org.lineageos.device.utils.FileUtils;
+
 public class VibratorStrengthPreference extends Preference implements
         SeekBar.OnSeekBarChangeListener {
 
@@ -67,15 +70,15 @@ public class VibratorStrengthPreference extends Preference implements
     }
 
     public static boolean isSupported() {
-        return Utils.fileWritable(FILE_LEVEL);
+        return FileUtils.isFileWritable(FILE_LEVEL);
     }
 
-	public static String getValue(Context context) {
-		return Utils.getFileValue(FILE_LEVEL, "3596");
-	}
+    public static String getValue(Context context) {
+        return FileUtils.getFileValue(FILE_LEVEL, "3596");
+    }
 
-	private void setValue(String newValue, boolean withFeedback) {
-	    Utils.writeValue(FILE_LEVEL, newValue);
+    private void setValue(String newValue, boolean withFeedback) {
+        FileUtils.writeValue(FILE_LEVEL, newValue);
         SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
         editor.putString(DeviceSettings.KEY_VIBSTRENGTH, newValue);
         editor.commit();
@@ -89,8 +92,8 @@ public class VibratorStrengthPreference extends Preference implements
             return;
         }
 
-        String storedValue = PreferenceManager.getDefaultSharedPreferences(context).getString(DeviceSettings.KEY_VIBSTRENGTH, "2700"); 
-        Utils.writeValue(FILE_LEVEL, storedValue);
+        String storedValue = PreferenceManager.getDefaultSharedPreferences(context).getString(DeviceSettings.KEY_VIBSTRENGTH, "2700");
+        FileUtils.writeValue(FILE_LEVEL, storedValue);
     }
 
     public void onProgressChanged(SeekBar seekBar, int progress,
@@ -106,4 +109,3 @@ public class VibratorStrengthPreference extends Preference implements
         // NA
     }
 }
-
