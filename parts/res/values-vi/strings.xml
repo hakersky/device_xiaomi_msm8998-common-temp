@@ -1,0 +1,55 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+<!-- Ambient Display -->
+<string name="ambient_display_title">Hiển hị xung quanh</string>
+<string name="ambient_display_title_summary">Cài đặt màn hình hiển thị xung quanh</string>
+
+<!-- categories -->
+<string name="category_system">Hệ Thống</string>
+<string name="category_display">Màn hình</string>
+<string name="category_kernel">Kernel</string>
+<string name="category_s2s">Sweep2Sleep</string>
+
+<!-- KCAL -->
+<string name="kcal_title">Màu màn hình</string>
+<string name="kcal_summary">Điều chỉnh màu màn hình bằng KCAL</string>
+<string name="kcal_enabled_title">Bật KCAL</string>
+<string name="kcal_enabled_summary">Bật điều chỉnh màu màn hình bằng KCAL</string>
+<string name="kcal_red">Đỏ</string>
+<string name="kcal_green">Lá</string>
+<string name="kcal_blue">Lam</string>
+<string name="kcal_saturation">Độ bão hòa</string>
+<string name="kcal_contrast">Tương phản</string>
+<string name="kcal_reset">Đặt lại</string>
+<string name="kcal_color_temp">Nhiệt độ màu (K)</string>
+
+<!-- Sweep2Sleep -->
+<string name="s2s_title">Vuốt để ngủ</string>
+<string name="s2s_vib_strength_title">Rung khi vuốt</string>
+<string name="s2s_summary">Hình thức vuốt</string>
+<string name="s2s_vibration_summary">Đặt mức độ rung khi vuốt</string>
+
+<!-- vibration strength -->
+<string name="vib_strength_title">Cường độ rung</string>
+<string name="vib_strength_summary">Điều chỉnh cường độ rung</string>
+
+<!-- package -->
+<string name="package_parts_name">XiaomiParts</string>
+<string name="package_parts_label">Nâng cao</string>
+<string name="package_parts_summary">Tùy chọn tính năng đặc biệt</string>
+
+<!-- kernel profiles / spectrum -->
+<string name="kernel_profile_title">Cấu hình Kernel</string>
+<string name="kernel_profile_summary">Chọn cấu hình Kernel</string>
+
+<!-- swap Hardware Buttons -->
+<string name="hw_buttons_title">Phím cứng</string>
+<string name="swap_hw_buttons_title">Hoán đổi phím cứng</string>
+<string name="swap_hw_buttons_summary">Hoán đổi phím đa nhiệm và phím trở lại</string>
+
+<!-- usb fastcharge -->
+<string name="usb_fastcharge_title">Sạc nhanh USB</string>
+<string name="fastcharge_title">Bật sạc nhanh USB</string>
+<string name="fastcharge_summary">Cho phép sạc nhanh khi kết nối với máy tính</string>
+
+</resources>
