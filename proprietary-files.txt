@@ -536,10 +536,10 @@ vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
-# Time services
--vendor/app/TimeService/TimeService.apk
-vendor/bin/time_daemon
-vendor/lib64/libtime_genoff.so
+# Time services - from OnePlus5T PKQ1.180716.001
+-vendor/app/TimeService/TimeService.apk|ab3469514a845e8933e1544e085dc686dc988637
+vendor/bin/time_daemon|f8df662e870ae3033d69410a575a53e4c9a73bc5
+vendor/lib64/libtime_genoff.so|5cbe121e2c47db348e5e034c7e702cd9494d6fd2
 
 # Wi-Fi
 vendor/bin/cnss-daemon
