@@ -1,1 +1,18 @@
 allow init adsprpcd_file:filesystem { mount relabelfrom relabelto };
+allow init sysfs_kgsl:lnk_file read;
+
+ allow init {
+  sysfs_devices_system_cpu
+  sysfs_kgsl
+  sysfs
+  sysfs_cpu_boost
+  proc
+}:file rw_file_perms;
+
+ allow init qti_init_shell:process noatsecure;
+allow init location:process noatsecure;
+allow init {
+  hal_audio_default
+  gatekeeperd
+  perfprofd
+}:process noatsecure;
