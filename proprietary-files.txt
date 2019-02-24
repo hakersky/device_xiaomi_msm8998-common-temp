@@ -418,6 +418,14 @@ vendor/lib/libvpplibrary.so
 vendor/lib/libvqzip.so
 -vendor/lib64/libgpustats.so
 
+# Mlipay - from platina PKQ1.181007.001
+lib64/vendor.xiaomi.hardware.mlipay@1.0.so|1573edb88032522d819feffced8c21fa40e1bded
+lib64/vendor.xiaomi.hardware.mlipay@1.1.so|ec9c96cb483e4a472290adb5c938c4d64c9d3ae4
+vendor/bin/mlipayd@1.1|e743d7ab90de8f13745161f70bb0271a84f01eac
+vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc|b5ab5bcd031fe4d9781b5911c0595eaeac8b80ea
+vendor/lib64/libmlipay@1.1.so|e73972bd8b91f9d3e82828223d5060b53dae4810
+vendor/lib64/libmlipay.so|2d294ba3bee3fb9ee0bbea022889c1a9e6ed562d
+
 # NFC firmware
 vendor/firmware/libpn553_fw.so:vendor/lib/libpn553_fw.so
 
@@ -526,8 +534,11 @@ vendor/lib64/libsensor_reg.so
 vendor/lib64/libsns_low_lat_stream_stub.so
 vendor/lib64/sensors.ssc.so
 
+# Thermal - from OnePlus5T PKQ1.180716.001
+vendor/bin/msm_irqbalance|117d7c8a8f6f12b3615ec8ab676231df93d277f1
+vendor/etc/msm_irqbalance.conf|6a9a7945b8902e770d12ed4f99ba9829e9c877fc
+
 # Thermal
-vendor/bin/msm_irqbalance
 vendor/bin/thermal-engine
 vendor/etc/thermal-engine-8998-high.conf
 vendor/etc/thermal-engine-8998-map.conf
